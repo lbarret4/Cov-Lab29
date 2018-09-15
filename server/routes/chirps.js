@@ -4,16 +4,22 @@ let router = express.Router();
 
 router.get('/:id?', (req,res) => {
     let id = req.params.id;
-    if(id){
-        res.json(chirpsStore.GetChirp(id));
-    }else{
+    if(id === "nextid" ){
+        res.json(chirpsStore.GetChirps().nextid);
+    }else if(id){
+        res.json(chirpsStore.GetChirps(id))
+    }
+    else{
         res.send(chirpsStore.GetChirps());
     }
 });
 
 router.post('/',(req,res) => {
+    let previousId= chirpsStore.GetChirps().nextid
     chirpsStore.CreateChirp(req.body);
-    res.sendStatus(200);
+    res.json(previousId);
+   
+
 });
 
 router.put('/:id',(req,res) => {
