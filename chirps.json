@@ -1,0 +1,19 @@
+{
+  "0": {
+    "user": "Kim",
+    "text": "Hello World, it's a nice day today!  &#128522"
+  },
+  "1": {
+    "user": "James",
+    "text": "I am not sure it's a nice day today,Kim 😩 "
+  },
+  "2": {
+    "user": "Kenji",
+    "text": "James, lighten up 😛  "
+  },
+  "3": {
+    "user": "Charles",
+    "text": "Hello Everybody ! 😁 "
+  },
+  "nextid": 6
+}
