@@ -7,7 +7,7 @@ router.get('/:id?', (req,res) => {
     if(id === "nextid" ){
         res.json(chirpsStore.GetChirps().nextid);
     }else if(id){
-        res.json(chirpsStore.GetChirps(id))
+        res.json(chirpsStore.GetChirp(id))
     }
     else{
         res.send(chirpsStore.GetChirps());
